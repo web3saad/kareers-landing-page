@@ -2,996 +2,569 @@
 <html lang="en">
 
 <head>
-    <!-- ========== Meta Tags ========== -->
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Kareers provides industry training and guaranteed internships for students.">
-
-    <!-- ========== Page Title ========== -->
+    <meta name="description" content="Kareers trains students in Full Stack Development, Data Science, Cyber Security and Cloud Computing, then places them in company internships. No placement means a 100% refund.">
+    <meta name="theme-color" content="#fdfbf6">
     <title>Kareers | Training to Internship</title>
 
-    <!-- ========== Favicon Icon ========== -->
-    <link rel="shortcut icon" href="assets/img/favicon.png" type="image/x-icon">
+    <link rel="icon" href="assets/img/favicon.png" type="image/png">
 
-    <!-- ========== Start Stylesheet ========== -->
-    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
-    <link href="assets/css/font-awesome.min.css" rel="stylesheet">
-    <link href="assets/css/magnific-popup.css" rel="stylesheet">
-    <link href="assets/css/swiper-bundle.min.css" rel="stylesheet">
-    <link href="assets/css/animate.min.css" rel="stylesheet">
-    <link href="assets/css/validnavs.css" rel="stylesheet">
-    <link href="assets/css/helper.css" rel="stylesheet">
-    <link href="assets/css/unit-test.css" rel="stylesheet">
-    <link href="assets/css/style.css" rel="stylesheet">
-    <link href="style.css" rel="stylesheet">
-    <style>
-        :root {
-            --color-primary: #0b1f3a;
-            --color-secondary: #123b68;
-            --color-style-two: #0b1f3a;
-            --color-style-three: #1d4f85;
-            --color-style-seven: #0b1f3a;
-            --color-style-eight: #2d5d8f;
-        }
-
-        .kareers-brand {
-            color: #ffffff;
-            font-size: 28px;
-            font-weight: 800;
-            letter-spacing: 0.02em;
-        }
-
-        .navbar-sticky.sticked .kareers-brand {
-            color: var(--color-style-two);
-        }
-
-        .mobile-header-logo {
-            display: none;
-        }
-
-        .mobile-menu-logo {
-            display: none;
-        }
-
-        .whatsapp-float {
-            position: fixed;
-            right: 24px;
-            bottom: 24px;
-            z-index: 999;
-            display: flex;
-            width: 58px;
-            height: 58px;
-            align-items: center;
-            justify-content: center;
-            border-radius: 50%;
-            background: #25d366;
-            color: #ffffff;
-            font-size: 30px;
-            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.22);
-        }
-
-        .whatsapp-float:hover,
-        .whatsapp-float:focus {
-            background: #1da851;
-            color: #ffffff;
-        }
-
-        .preloader-logo {
-            display: block;
-            width: 240px;
-            max-width: 80vw;
-            height: auto;
-            margin: 0 auto;
-        }
-
-        .faculty-style-one-items > .row {
-            display: flex;
-            align-items: stretch;
-        }
-
-        .faculty-style-one-items > .row > [class*="col-"] {
-            display: flex;
-        }
-
-        .faculty-style-one-item {
-            display: flex;
-            flex-direction: column;
-            width: 100%;
-        }
-
-        .faculty-style-one-item .thumb img {
-            display: block;
-            width: 100%;
-            height: 220px;
-            object-fit: cover;
-            object-position: center;
-        }
-
-        .faculty-style-one-item .info {
-            display: flex;
-            flex: 1;
-            flex-direction: column;
-        }
-
-        .faculty-style-one-item .info p {
-            min-height: 96px;
-        }
-
-        .faculty-style-one-item ul.faculty-list {
-            min-height: 105px;
-        }
-
-        .faculty-style-one-item .btn {
-            margin-top: auto;
-        }
-
-        @media (max-width: 991px) {
-            .mobile-header-logo {
-                display: block;
-                position: absolute;
-                top: 50%;
-                left: 50%;
-                width: 320px;
-                max-width: 320px;
-                height: 114px;
-                object-fit: contain;
-                transform: translate(-50%, -50%);
-            }
-
-            .mobile-menu-logo {
-                display: block;
-                width: 240px;
-                max-width: 78%;
-                height: 90px;
-                object-fit: contain;
-                object-position: center;
-                margin: 18px auto 34px;
-            }
-
-            .faculty-style-one-items > .row {
-                display: block;
-            }
-
-            .faculty-style-one-items > .row > [class*="col-"] {
-                display: block;
-            }
-        }
-    </style>
-    <!-- ========== End Stylesheet ========== -->
-
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..600;1,9..144,300..500&family=Outfit:wght@300..700&family=Plus+Jakarta+Sans:ital,wght@0,700..800;1,700..800&display=swap" rel="stylesheet">
+    <link href="assets/css/kareers.css" rel="stylesheet">
+    <script>document.documentElement.classList.add('js');</script>
 </head>
 
-<body class="theme-style-three">
+<body id="top">
 
-    <!-- Start Preloader 
-    ============================================= -->
-    <div id="preloader">
-        <div id="edufix-preloader" class="edufix-preloader">
-            <div class="animation-preloader">
-                <div class="spinner"></div>
-                <div class="txt-loading">
-                    <img class="preloader-logo" src="assets/img/about/logo.png" alt="Kareers">
-                </div>
+    <!-- Shared icons -->
+    <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+        <symbol id="i-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M5 12h14M13 6l6 6-6 6" />
+        </symbol>
+        <symbol id="i-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M5 12.5l4.5 4.5L19 7.5" />
+        </symbol>
+        <symbol id="i-wa" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M17.47 14.38c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.16-.17.2-.35.22-.64.07-.3-.15-1.26-.46-2.39-1.47-.88-.79-1.48-1.76-1.65-2.06-.17-.3-.02-.46.13-.6.13-.14.3-.35.45-.52.15-.18.2-.3.3-.5.1-.2.05-.37-.03-.52-.07-.15-.67-1.61-.92-2.2-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48s1.07 2.88 1.21 3.07c.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.7.63.71.22 1.36.19 1.87.12.57-.09 1.76-.72 2-1.41.25-.7.25-1.29.18-1.41-.08-.13-.27-.2-.57-.35m-5.42 7.4h-.01a9.87 9.87 0 01-5.03-1.38l-.36-.21-3.74.98 1-3.65-.24-.37a9.86 9.86 0 01-1.51-5.26c0-5.45 4.44-9.88 9.89-9.88 2.64 0 5.12 1.03 6.99 2.9a9.83 9.83 0 012.89 6.99c0 5.45-4.44 9.88-9.88 9.88m8.41-18.3A11.82 11.82 0 0012.05 0C5.5 0 .16 5.34.16 11.89c0 2.1.55 4.14 1.59 5.95L.06 24l6.3-1.65a11.88 11.88 0 005.68 1.45h.01c6.55 0 11.89-5.34 11.89-11.89a11.82 11.82 0 00-3.48-8.41z" />
+        </symbol>
+        <symbol id="i-cap" viewBox="0 0 26 20">
+            <path d="M13 1.2L25 6.3 13 11.4 1 6.3z" fill="currentColor" />
+            <path d="M6.2 8.8v4c0 1.7 3 3.1 6.8 3.1s6.8-1.4 6.8-3.1v-4L13 11.7z" fill="currentColor" />
+            <path d="M22.6 6.6v6.6" stroke="#c39a4b" stroke-width="1.2" fill="none" />
+            <path d="M22.6 12.6c-.9 0-1.4 1.6-1.4 3.2 0 .9.6 1.4 1.4 1.4s1.4-.5 1.4-1.4c0-1.6-.5-3.2-1.4-3.2z" fill="#c39a4b" />
+        </symbol>
+    </svg>
+
+    <!-- Header -->
+    <header class="site-header" id="header">
+        <nav class="wrap nav" aria-label="Main">
+            <a class="brand" href="#top" aria-label="Kareers home">Kareers<svg aria-hidden="true"><use href="#i-cap" /></svg></a>
+
+            <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-links" aria-label="Open menu">
+                <span></span><span></span>
+            </button>
+
+            <div class="nav-links" id="nav-links">
+                <a href="#domains">Domains</a>
+                <a href="#how-it-works">How it works</a>
+                <a href="#about-kareers">About</a>
+                <a href="#career-application">Contact</a>
+                <a class="btn btn-primary" href="#career-application">Apply now</a>
             </div>
-            <div class="loader">
-                <div class="row">
-                    <div class="col-3 loader-section section-left">
-                        <div class="bg"></div>
-                    </div>
-                    <div class="col-3 loader-section section-left">
-                        <div class="bg"></div>
-                    </div>
-                    <div class="col-3 loader-section section-right">
-                        <div class="bg"></div>
-                    </div>
-                    <div class="col-3 loader-section section-right">
-                        <div class="bg"></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- End Preloader -->
-
-    <!--[if lte IE 9]>
-        <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
-    <![endif]-->
-
-
-    <!-- Header 
-    ============================================= -->
-    <header>
-        <!-- Start Navigation -->
-        <nav class="navbar mobile-sidenav navbar-sticky navbar-default validnavs white navbar-fixed no-background">
-
-
-            <div class="container d-flex justify-content-between align-items-center">            
-
-                <!-- Start Header Navigation -->
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu">
-                        <i class="fa fa-bars"></i>
-                    </button>
-                    <a class="navbar-brand" href="index.html">
-                        <span class="kareers-brand">Kareers</span>
-                    </a>
-                </div>
-                <img class="mobile-header-logo" src="assets/img/about/logo.png" alt="Kareers">
-                <!-- End Header Navigation -->
-
-                <div class="nav-item-box d-flex justify-content-between align-items-center">
-                    <!-- Collect the nav links, forms, and other content for toggling -->
-                    <div class="collapse navbar-collapse" id="navbar-menu">
-
-                        <img class="mobile-menu-logo" src="assets/img/about/logo.png" alt="Kareers">
-                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu">
-                            <i class="fa fa-times"></i>
-                        </button>
-                        
-                        <ul class="nav navbar-nav navbar-right" data-in="fadeInDown" data-out="fadeOutUp">
-                            <li><a href="index.html">Home</a></li>
-                            <li><a href="#domains">Domains</a></li>
-                            <li><a href="#about-kareers">About Kareers</a></li>
-                            <li><a href="#career-application">Contact</a></li>
-                        </ul>
-                    </div><!-- /.navbar-collapse -->
-
-                </div>
-
-            </div>   
-            <!-- Overlay screen for menu -->
-            <div class="overlay-screen"></div>
-            <!-- End Overlay screen for menu -->
         </nav>
-        <!-- End Navigation -->
     </header>
-    <!-- End Header -->
 
-    <a class="whatsapp-float" href="https://wa.me/919526986282?text=Hello%20Kareers%2C%20I%20want%20to%20learn%20more." target="_blank" rel="noopener" aria-label="Chat with Kareers on WhatsApp">
-        <i class="fab fa-whatsapp"></i>
-    </a>
-    
-    <!-- Start Banner Area 
-    ============================================= -->
-    <div class="banner-area banner-style-seven-area navigation-circle zoom-effect overflow-hidden text-light">
-        <div class="banner-round-shape"></div>
-        <!-- Slider main container -->
-        <div class="banner-fade">
-            <!-- Additional required wrapper -->
-            <div class="swiper-wrapper">
+    <main>
 
-                <!-- Single Item -->
-                <div class="swiper-slide banner-style-seven">
-                    <div class="banner-thumb bg-cover shadow dark" style="background: url('assets/img/banner/1920%20%C3%97%201285.webp');"></div>
-                    <div class="container">
-                        <div class="banner-style-seven-info">
-                            <div class="fixed-thumb">
-                                <img src="assets/img/illustration/4.png" alt="Image Not Found">
-                            </div>
-                            <div class="row align-center">
-                                <div class="col-lg-7">
-                                    <div class="content">
-                                        <h2>Train for your future. Start your internship.</h2>
-                                        <div class="info">
-                                            <p>
-                                                Build job-ready skills with expert training, practical projects and direct pathways to internships at leading companies.
-                                            </p>
-                                            <div class="button">
-                                                <a class="btn btn-md btn-gradient animation" href="#domains">Start Your Journey</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-4 offset-lg-1">
-                                    <div class="right-info">
-                                        <ul>
-                                            <li>
-                                                <h5>100% Internship Placement</h5>
-                                                <p>
-                                                    We train you for the skills companies are hiring for.
-                                                </p>
-                                            </li>
-                                            <li>
-                                                <h5>Refund Promise</h5>
-                                                <p>
-                                                    No internship placement? Get a 100% refund.
-                                                </p>
-                                            </li>
-                                        </ul>
-                                        <img src="assets/img/shape/25.png" alt="Image Not Found">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+        <!-- Hero -->
+        <section class="hero">
+            <div class="wrap hero-grid">
+                <div>
+                    <span class="hero-pill" data-reveal><svg aria-hidden="true"><use href="#i-cap" /></svg>Training to Internship</span>
+                    <h1 class="hero-title" data-reveal style="--d:.08s">
+                        100% internship placement.
+                        <em>Or a <span class="underline">full refund.<svg viewBox="0 0 300 14" preserveAspectRatio="none" aria-hidden="true"><path d="M3 10C70 4 160 2 297 6" stroke="currentColor" stroke-width="3" fill="none" stroke-linecap="round" /></svg></span></em>
+                    </h1>
+                    <p class="lede" data-reveal style="--d:.16s">
+                        Get trained by experts, build real projects and get placed at a company.
+                    </p>
+                    <div class="hero-actions" data-reveal style="--d:.24s">
+                        <a class="btn btn-primary" href="#domains">Explore domains <svg class="arrow" aria-hidden="true"><use href="#i-arrow" /></svg></a>
+                        <a class="btn btn-ghost" href="https://wa.me/919526986282?text=Hello%20Kareers%2C%20I%20want%20to%20learn%20more." target="_blank" rel="noopener">
+                            <svg aria-hidden="true" style="color:var(--wa)"><use href="#i-wa" /></svg> Chat on WhatsApp
+                        </a>
                     </div>
                 </div>
-                <!-- End Single Item -->
 
-                <!-- Single Item -->
-                <div class="swiper-slide banner-style-seven">
-                    <div class="banner-thumb bg-cover shadow dark" style="background: url('assets/img/banner/2048%20x%201152.webp');"></div>
-                    <div class="container">
-                        <div class="banner-style-seven-info">
-                            <div class="fixed-thumb">
-                                <img src="assets/img/illustration/4.png" alt="Image Not Found">
-                            </div>
-                            <div class="row align-center">
-                                <div class="col-lg-7">
-                                    <div class="content">
-                                        <h2>Learn in-demand skills. Get placed with confidence.</h2>
-                                        <div class="info">
-                                            <p>
-                                                Kareers connects ambitious students with career-focused training and internship opportunities at companies.
-                                            </p>
-                                            <div class="button">
-                                                <a class="btn btn-md btn-gradient animation" href="#domains">Explore Kareers</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-4 offset-lg-1">
-                                    <div class="right-info">
-                                        <ul>
-                                            <li>
-                                                <h5>Industry-Focused Training</h5>
-                                                <p>
-                                                    Learn through projects, mentorship and hands-on practice.
-                                                </p>
-                                            </li>
-                                            <li>
-                                                <h5>Career-Ready Outcomes</h5>
-                                                <p>
-                                                    Graduate ready to contribute from day one.
-                                                </p>
-                                            </li>
-                                        </ul>
-                                        <img src="assets/img/shape/25.png" alt="Image Not Found">
-                                    </div>
-                                </div>
-                            </div>
+                <aside class="pathway" data-reveal style="--d:.2s" aria-label="The Kareers pathway">
+                    <div class="pathway-head">
+                        <div>
+                            <small>Your pathway</small>
+                            <strong>Full Stack Development</strong>
                         </div>
+                        <span class="chip"><i></i>4-step pathway</span>
                     </div>
-                </div>
-                <!-- End Single Item -->
-
+                    <ol class="steps">
+                        <li class="is-done">
+                            <span class="dot"><svg aria-hidden="true"><use href="#i-check" /></svg></span>
+                            <div>
+                                <h3>Industry-focused training</h3>
+                                <p>Curriculum built around what companies hire for</p>
+                            </div>
+                            <span class="tag">Step 1</span>
+                        </li>
+                        <li class="is-done">
+                            <span class="dot"><svg aria-hidden="true"><use href="#i-check" /></svg></span>
+                            <div>
+                                <h3>Hands-on projects</h3>
+                                <p>Real work for your portfolio</p>
+                            </div>
+                            <span class="tag">Step 2</span>
+                        </li>
+                        <li class="is-now">
+                            <span class="dot"></span>
+                            <div>
+                                <h3>Mentorship &amp; interview prep</h3>
+                                <p>Feedback, mock interviews, confidence</p>
+                            </div>
+                            <span class="tag">Step 3</span>
+                        </li>
+                        <li class="is-goal">
+                            <span class="dot"><svg aria-hidden="true"><use href="#i-arrow" /></svg></span>
+                            <div>
+                                <h3>Company internship</h3>
+                                <p>Placed with a company, ready from day one</p>
+                            </div>
+                            <span class="tag">Step 4</span>
+                        </li>
+                    </ol>
+                    <div class="guarantee">
+                        <span>Not placed?<br>You get a full refund.</span>
+                        <b>100%</b>
+                    </div>
+                </aside>
             </div>
+        </section>
 
-            <!-- Navigation -->
-            <div class="swiper-nav-left">
-                <div class="swiper-button-prev"></div>
-                <div class="swiper-button-next"></div>
-            </div>
-
-        </div>        
-    </div>
-    <!-- End Main -->
-
-    <!-- Start Feature 
-    ============================================= -->
-    <div class="feature-style-two-area default-padding-top bg-gray-gradient-secondary">
-        <div class="shape">
-            <img src="assets/img/shape/58.png" alt="Image Not Found">
-        </div>
-        <div class="container">
-            <div class="row">
-                <!-- Single Item -->
-                <div class="col-lg-4 col-md-12 mb-md-50">
-                    <div class="experience-card-two wow fadeInUp">
-                        <div class="counter">
-                            <div class="timer" data-to="100" data-speed="1000">100</div>
-                            <div class="operator">%</div>
+        <!-- Platform showcase -->
+        <section class="showcase" id="platform" aria-labelledby="platform-title">
+            <div class="wrap">
+                <div class="portal-panel">
+                    <div class="portal-top">
+                        <div data-reveal>
+                            <span class="eyebrow">The Kareers student portal</span>
+                            <h2 class="display" id="platform-title">Learn with AI, <em>track every step.</em></h2>
                         </div>
-                        <h3>Internship placement or 100% refund</h3>
-                    </div>
-                    
-                </div>
-                <!-- End Single Item -->
-                <!-- Single Item -->
-                <div class="col-lg-4 col-md-6">
-                    <div class="feature-style-two-item active wow fadeInUp" data-wow-delay="400ms">
-                        <div class="icon">
-                            <img src="assets/img/icon/60.png" alt="Image Not Found">
-                        </div>
-                        <h4><a href="#">Practical Training</a></h4>
-                        <p>
-                            Learn through industry-focused curriculum, real projects and expert mentorship.
-                        </p>
-                        <div class="bottom">
-                            <span>01</span>
-                           
-                        </div>
-                    </div>
-                </div>
-                <!-- End Single Item -->
-                <!-- Single Item -->
-                <div class="col-lg-4 col-md-6">
-                    <div class="feature-style-two-item wow fadeInUp" data-wow-delay="600ms">
-                        <div class="icon">
-                            <img src="assets/img/icon/61.png" alt="Image Not Found">
-                        </div>
-                        <h4><a href="#">Company Internship Pathway</a></h4>
-                        <p>
-                            Build your portfolio, prepare for interviews and connect with companies for internship placement.
-                        </p>
-                        <div class="bottom">
-                            <span>02</span>
-                            
-                        </div>
-                    </div>
-                </div>
-                <!-- End Single Item -->
-            </div>
-        </div>
-    </div>
-    <!-- End Feature -->
-
-
-    <!-- Start Faculty 
-    ============================================= -->
-    <div id="domains" class="faculty-area default-padding bottom-less bg-theme" style="background-image: url(assets/img/shape/41.png);">
-        <div class="container">
-            <div class="site-heading text-light text-center">
-                <div class="row">
-                    <div class="col-xl-6 offset-xl-3 col-lg-8 offset-lg-2">
-                        <h4 class="sub-title">Kareers Domains</h4>
-                        <h2 class="title split-text">Choose the skills that move your career forward</h2>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="container">
-            <div class="faculty-style-one-items">
-                <div class="row">
-                    <!-- Single Item -->
-                    <div class="col-lg-3 col-md-6 mb-30">
-                        <div class="faculty-style-one-item wow fadeInUp">
-                            <div class="thumb">
-                                <img src="assets/img/faculty/fullstack.webp" alt="Full Stack Development">
-                            </div>
-                            <div class="info">
-                                <h4><a href="course-single.html">Full Stack Development</a></h4>
-                                <p>
-                                    Build modern web applications from front end to back end and deploy production-ready projects.
-                                </p>
-                                <ul class="faculty-list">
-                                    <li>Frontend</li>
-                                    <li>Backend</li>
-                                    <li>Databases</li>
-                                    <li>APIs</li>
-                                    <li>Deployment</li>
-                                </ul>
-                                <a href="https://wa.me/919526986282?text=Hello%20Kareers%2C%20I%20want%20to%20apply%20for%20Full%20Stack%20Development." target="_blank" rel="noopener" class="btn btn-gradient btn-sm animation">Apply Now</a>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- End Single Item -->
-                    <!-- Single Item -->
-                    <div class="col-lg-3 col-md-6 mb-30">
-                        <div class="faculty-style-one-item wow fadeInUp" data-wow-delay="200ms">
-                            <div class="thumb">
-                                <img src="assets/img/faculty/datascience.webp" alt="Data Science">
-                            </div>
-                            <div class="info">
-                                <h4><a href="course-single.html">Data Science</a></h4>
-                                <p>
-                                    Turn data into decisions with Python, analytics, machine learning and practical projects.
-                                </p>
-                                <ul class="faculty-list">
-                                    <li>Python</li>
-                                    <li>Analytics</li>
-                                    <li>Machine Learning</li>
-                                    <li>Visualisation</li>
-                                    <li>Projects</li>
-                                </ul>
-                                <a href="https://wa.me/919526986282?text=Hello%20Kareers%2C%20I%20want%20to%20apply%20for%20Data%20Science." target="_blank" rel="noopener" class="btn btn-gradient btn-sm animation">Apply Now</a>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- End Single Item -->
-                    <!-- Single Item -->
-                    <div class="col-lg-3 col-md-6 mb-30">
-                        <div class="faculty-style-one-item wow fadeInUp" data-wow-delay="400ms">
-                            <div class="thumb">
-                                <img src="assets/img/faculty/Cybersecurity_certiprof.webp" alt="Cyber Security">
-                            </div>
-                            <div class="info">
-                                <h4><a href="course-single.html">Cyber Security</a></h4>
-                                <p>
-                                    Learn to protect systems, identify threats and apply security practices used by modern teams.
-                                </p>
-                                <ul class="faculty-list">
-                                    <li>Networking</li>
-                                    <li>Ethical Hacking</li>
-                                    <li>Threats</li>
-                                    <li>Defence</li>
-                                    <li>Labs</li>
-                                </ul>
-                                <a href="https://wa.me/919526986282?text=Hello%20Kareers%2C%20I%20want%20to%20apply%20for%20Cyber%20Security." target="_blank" rel="noopener" class="btn btn-gradient btn-sm animation">Apply Now</a>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- End Single Item -->
-                    <!-- Single Item -->
-                    <div class="col-lg-3 col-md-6 mb-30">
-                        <div class="faculty-style-one-item wow fadeInUp" data-wow-delay="600ms">
-                            <div class="thumb">
-                                <img src="assets/img/faculty/cloudcomputing.webp" alt="Cloud Computing">
-                            </div>
-                            <div class="info">
-                                <h4><a href="course-single.html">Cloud Computing</a></h4>
-                                <p>
-                                    Master cloud platforms, scalable infrastructure, automation and the tools companies use every day.
-                                </p>
-                                <ul class="faculty-list">
-                                    <li>Cloud Platforms</li>
-                                    <li>Linux</li>
-                                    <li>DevOps</li>
-                                    <li>Automation</li>
-                                    <li>Architecture</li>
-                                </ul>
-                                <a href="https://wa.me/919526986282?text=Hello%20Kareers%2C%20I%20want%20to%20explore%20Cloud%20Computing." target="_blank" rel="noopener" class="btn btn-gradient btn-sm animation">Explore Domain</a>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- End Single Item -->
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- End Faculty -->
-
-    <!-- Start Choose Us 
-    ============================================= -->
-    <div id="about-kareers" class="choose-us-style-four-area default-padding">
-        <div class="container">
-            <div class="row align-center">
-                <div class="col-xl-6 col-lg-5 pr-60 pr-md-15 pr-xs-15">
-                    <div class="thumb-style-six wow fadeInUp">
-                        <img src="assets/img/about/8.jpg" alt="Image Not Found">
-                    </div>
-                </div>
-                <div class="col-xl-6 col-lg-7">
-                    <div class="choose-us-style-four-info">
-                        <h2 class="title split-text">Why students choose Kareers</h2>
-                        <p class="wow fadeInUp" data-wow-delay="200ms">
-                            Kareers is built to take students from learning to earning. Gain practical skills, build proof of work and get access to internship opportunities at companies.
-                        </p>
-                        <div class="d-grid mt-30 wow fadeInUp" data-wow-delay="400ms">
-                            <div class="faq-style-two-items">
-                                <div class="accordion" id="faqAccordion">
-                                    <div class="accordion-item faq-style-two">
-                                        <h2 class="accordion-header" id="headingOne">
-                                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                                Learn by Doing
-                                            </button>
-                                        </h2>
-                                        <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#faqAccordion">
-                                            <div class="accordion-body">
-                                                <p>
-                                                    Work on guided projects that mirror real company requirements and strengthen your portfolio.
-                                                </p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="accordion-item faq-style-two">
-                                        <h2 class="accordion-header" id="headingTwo">
-                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                                Mentorship & Interview Prep
-                                            </button>
-                                        </h2>
-                                        <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#faqAccordion">
-                                            <div class="accordion-body">
-                                                <p>
-                                                    Get feedback from mentors, practise interviews and prepare to perform confidently in the hiring process.
-                                                </p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="accordion-item faq-style-two">
-                                        <h2 class="accordion-header" id="headingThree">
-                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                                100% Refund Promise
-                                            </button>
-                                        </h2>
-                                        <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#faqAccordion">
-                                            <div class="accordion-body">
-                                                <p>
-                                                    We are committed to placing trained students in internships. If we do not place you, you receive a 100% refund.
-                                                </p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="fun-fact">
-                                <div class="icon">
-                                    <img src="assets/img/icon/62.png" alt="Image Not Found">
-                                </div>
-                                <div class="info">
-                                    <div class="counter">
-                                        <div class="timer" data-to="100" data-speed="2000">100</div>
-                                        <div class="operator">%</div>
-                                    </div>
-                                    <span class="medium">Internship placement commitment</span>
-                                </div>
-                            </div>
-
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- End Choose Us -->
-
-    <!-- Start Career Pathways 
-    ============================================= -->
-    <div class="tuition-free-area default-padding bg-gray-gradient-secondary">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-4">
-                    <div class="wow fadeInUp">
-                        <h4 class="sub-title">Career Investment</h4>
-                        <h2 class="title split-text">Training that leads to opportunity</h2>
-                        <p>
-                            Choose a career domain, learn from practitioners and get the support you need to secure an internship. No placement means a 100% refund.
-                        </p>
-                        <a href="https://wa.me/919526986282?text=Hello%20Kareers%2C%20I%20want%20to%20join%20Kareers." target="_blank" rel="noopener" class="btn btn-gradient btn-sm animation">Join Kareers</a>
-                    </div>
-                </div>
-                <div class="col-lg-8 pl-50 pl-md-15 pl-xs-15">
-                    <div class="tution-fees-items wow fadeInUp" data-wow-delay="300ms">
-                        <ul class="nav nav-tabs nav-tabs-style-three" id="myTab" role="tablist">
-                            <li class="nav-item" role="presentation">
-                                <button class="nav-link active" id="tabs_1" data-bs-toggle="tab" data-bs-target="#tab_1" type="button" role="tab" aria-controls="tab_1" aria-selected="true">
-                                    Full Stack Development
-                                </button>
-                            </li>
-                            <li class="nav-item" role="presentation">
-                                <button class="nav-link" id="tabs_2" data-bs-toggle="tab" data-bs-target="#tab_2" type="button" role="tab" aria-controls="tab_2" aria-selected="false">
-                                    Data Science
-                                </button>
-                            </li>
-                            <li class="nav-item" role="presentation">
-                                <button class="nav-link" id="tabs_3" data-bs-toggle="tab" data-bs-target="#tab_3" type="button" role="tab" aria-controls="tab_3" aria-selected="false">
-                                    Cyber Security
-                                </button>
-                            </li>
-                            <li class="nav-item" role="presentation">
-                                <button class="nav-link" id="tabs_4" data-bs-toggle="tab" data-bs-target="#tab_4" type="button" role="tab" aria-controls="tab_4" aria-selected="false">
-                                    Cloud Computing
-                                </button>
-                            </li>
-                        </ul>
-                        <div class="tab-content tab-content-style-three" id="myTabContent">
-                            <div class="tab-pane show active" id="tab_1" role="tabpanel" aria-labelledby="tabs_1">
-                                <div class="tuition-fee-info text-light">
-                                    <div class="top">
-                                        <h4>What you will learn</h4>
-                                        <p>
-                                            Job-ready pathway
-                                        </p>
-                                    </div>
-                                    <div class="bottom">
-                                        <h5>Career Outcomes</h5>
-                                        <ul>
-                                            <li>Hands-on projects: <strong>Included</strong></li>
-                                            <li>Mentor guidance: <strong>Included</strong></li>
-                                        </ul>
-                                        <h5>Placement Promise</h5>
-                                        <ul>
-                                            <li>Company internship placement: <strong>100%</strong></li>
-                                            <li>If not placed: <strong>100% refund</strong></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="tab-pane" id="tab_2" role="tabpanel" aria-labelledby="tabs_2">
-                                <div class="tuition-fee-info text-light">
-                                    <div class="top">
-                                        <h4>What you will learn</h4>
-                                        <p>
-                                            Job-ready pathway
-                                        </p>
-                                    </div>
-                                    <div class="bottom">
-                                        <h5>Career Outcomes</h5>
-                                        <ul>
-                                            <li>Practical curriculum: <strong>Included</strong></li>
-                                            <li>Portfolio projects: <strong>Included</strong></li>
-                                        </ul>
-                                        <h5>Placement Promise</h5>
-                                        <ul>
-                                            <li>Company internship placement: <strong>100%</strong></li>
-                                            <li>If not placed: <strong>100% refund</strong></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="tab-pane" id="tab_3" role="tabpanel" aria-labelledby="tabs_3">
-                                <div class="tuition-fee-info text-light">
-                                    <div class="top">
-                                        <h4>What you will learn</h4>
-                                        <p>
-                                            Job-ready pathway
-                                        </p>
-                                    </div>
-                                    <div class="bottom">
-                                        <h5>Career Outcomes</h5>
-                                        <ul>
-                                            <li>Security labs: <strong>Included</strong></li>
-                                            <li>Interview preparation: <strong>Included</strong></li>
-                                        </ul>
-                                        <h5>Placement Promise</h5>
-                                        <ul>
-                                            <li>Company internship placement: <strong>100%</strong></li>
-                                            <li>If not placed: <strong>100% refund</strong></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="tab-pane" id="tab_4" role="tabpanel" aria-labelledby="tabs_4">
-                                <div class="tuition-fee-info text-light">
-                                    <div class="top">
-                                        <h4>What you will learn</h4>
-                                        <p>
-                                            Job-ready pathway
-                                        </p>
-                                    </div>
-                                    <div class="bottom">
-                                        <h5>Career Outcomes</h5>
-                                        <ul>
-                                            <li>Cloud labs: <strong>Included</strong></li>
-                                            <li>DevOps practice: <strong>Included</strong></li>
-                                        </ul>
-                                        <h5>Placement Promise</h5>
-                                        <ul>
-                                            <li>Company internship placement: <strong>100%</strong></li>
-                                            <li>If not placed: <strong>100% refund</strong></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- End Career Pathways -->
-
-    
-    <!-- Start Apply Form 
-    ============================================= -->
-    <div id="career-application" class="admission-form-style-one-area default-padding">
-        <div class="shape">
-            <img src="assets/img/shape/59.png" alt="Image Not Found">
-        </div>
-        <div class="container container-stage">
-            <div class="admission-form-items bg-cover wow fadeInUp" style="background-image: url('assets/img/about/graduuu.jpg');">
-                <div class="row">
-                    <div class="col-lg-6">
-                        <div class="admission-form-style-one">
-                            <h4 class="sub-title">Start your Kareers journey</h4>
-                            <p>
-                                Tell us about yourself and choose the domain you want to master. Our team will contact you about the next cohort.
-                            </p>
-                            <form action="#" method="POST">
-                                <div class="row">
-                                    <div class="col-lg-6">
-                                        <div class="form-group">
-                                            <label for="f-name">First Name</label>
-                                            <input class="form-control" id="f-name" name="f-name" type="text">
-                                            <span class="alert-error"></span>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-6">
-                                        <div class="form-group">
-                                            <label for="l-name">Last Name</label>
-                                            <input class="form-control" id="l-name" name="l-name" type="text">
-                                            <span class="alert-error"></span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-lg-6">
-                                        <div class="form-group">
-                                            <label for="email">Email Address</label>
-                                            <input class="form-control" id="email" name="email" type="email">
-                                            <span class="alert-error"></span>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-6">
-                                        <div class="form-group">
-                                            <label for="phone">Phone Number</label>
-                                            <input class="form-control" id="phone" name="phone" type="text">
-                                            <span class="alert-error"></span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-lg-12">
-                                        <div class="form-group">
-                                            <label for="country">City</label>
-                                            <input class="form-control" id="country" name="country" placeholder="City" type="text">
-                                            <span class="alert-error"></span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-lg-6">
-                                        <div class="form-group">
-                                            <label for="address-1">Current Qualification</label>
-                                            <input class="form-control" id="address-1" name="address-1" type="text">
-                                            <span class="alert-error"></span>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-6">
-                                        <div class="form-group">
-                                            <label for="address-2">Experience Level</label>
-                                            <input class="form-control" id="address-2" name="address-2" type="text">
-                                            <span class="alert-error"></span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-lg-12">
-                                        <div class="form-group">
-                                            <label for="subject">Select Your Domain</label>
-                                            <select id="subject" name="subject">
-                                                <option value="1">Full Stack Development</option>
-                                                <option value="2">Data Science</option>
-                                                <option value="4">Cyber Security</option>
-                                                <option value="5">Cloud Computing</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-lg-12">
-                                        <a id="request-program-details" href="https://wa.me/919526986282" target="_blank" rel="noopener" class="btn btn-gradient">
-                                            <i class="fa fa-paper-plane"></i> Request Program Details
-                                        </a>
-                                    </div>
-                                </div>
-                                <!-- Alert Message -->
-                                <div class="col-lg-12 alert-notification">
-                                    <div id="message" class="alert-msg"></div>
-                                </div>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- End Apply Form  -->
-
-   
-
-    <!-- Start Footer 
-    ============================================= -->
-    <footer class="bg-dark overflow-hidden text-light footer-style-four" style="background-image: url(assets/img/shape/17.png);">
-        <div class="container">
-            <div class="f-items default-padding">
-                <div class="row">
-                    <div class="col-lg-4 col-md-6 footer-item pr-30 pr-md-15 pr-xs-15">
-                        <div class="f-item about">
-                            <div class="footer-logo">
-                                <span class="kareers-brand">Kareers</span>
-                            </div>
-                            <p>
-                                Kareers trains students in high-demand technology domains and connects them with company internships. If we do not place you, you receive a 100% refund.
-                            </p>
-                            <ul class="footer-social">
-                                <li>
-                                    <a href="#">
-                                        <i class="fab fa-facebook-f"></i>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        <img src="assets/img/icon/x.png" alt="Icon">
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        <i class="fab fa-youtube"></i>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        <i class="fab fa-linkedin-in"></i>
-                                    </a>
-                                </li>
+                        <div data-reveal style="--d:.1s">
+                            <p>Courses, assignments and certificates in one place, with AI-assisted lessons built in.</p>
+                            <ul class="portal-features">
+                                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l1.9 4.6 4.6 1.9-4.6 1.9L12 16l-1.9-4.6-4.6-1.9 4.6-1.9z" /></svg>AI-assisted lessons</li>
+                                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="5" width="16" height="15" rx="2" /><path d="M8 3v4M16 3v4M4 10h16" /></svg>Weekly assignments</li>
+                                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="9" r="5" /><path d="M9 13.5L8 21l4-2 4 2-1-7.5" /></svg>Certificates</li>
                             </ul>
                         </div>
                     </div>
-                    <div class="col-lg-4 col-md-6 footer-item">
-                        <div class="f-item link">
-                            <h4 class="widget-title">Contact Kareers</h4>
-                            <ul>
-                                <li><a href="#career-application">Start Your Journey</a></li>
-                                <li><a href="#domains">Explore Domains</a></li>
-                                <li><a href="https://wa.me/919526986282" target="_blank" rel="noopener">WhatsApp: +91 95269 86282</a></li>
-                                <li><a href="mailto:hello@kareers.com">hello@kareers.com</a></li>
-                            </ul>
+
+                    <div class="portal-shot" id="showcase-stage">
+                        <div class="portal-frame">
+                            <img src="assets/img/student-portal.jpg" alt="Kareers student portal dashboard showing courses in progress, overall progress, announcements and upcoming assignments" width="1672" height="941" loading="lazy">
                         </div>
                     </div>
                 </div>
             </div>
-            <!-- Start Footer Bottom -->
-            <div class="footer-bottom style-two">
-                <div class="row">
-                    <div class="col-lg-6">
-                        <p>Â© Copyright 2025. All Rights Reserved by <a href="#">Kareers</a></p>
+        </section>
+
+        <!-- Domains -->
+        <section class="section" id="domains" aria-labelledby="domains-title">
+            <div class="wrap">
+                <div class="section-head">
+                    <div data-reveal>
+                        <span class="eyebrow">Kareers domains</span>
+                        <h2 class="display h2" id="domains-title">Choose the skills that <em>move your career</em> forward.</h2>
                     </div>
-                    <div class="col-lg-6 text-end">
-                        <ul class="link-list">
-                            <li>
-                                <a href="#">Terms</a>
-                            </li>
-                            <li>
-                                <a href="#">Privacy</a>
-                            </li>
-                            <li>
-                                <a href="#">Support</a>
-                            </li>
-                        </ul>
-                    </div>
+                    <p class="lede" data-reveal style="--d:.1s">
+                        Four career domains with AI-based training, practical projects, mentor guidance and the same placement promise.
+                    </p>
+                </div>
+
+                <div class="domain-grid">
+                    <article class="domain-card" data-reveal style="--d:.00s">
+                        <div class="domain-top">
+                            <span class="domain-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 7l-5 5 5 5M16 7l5 5-5 5M13.5 4l-3 16" /></svg></span>
+                            <span class="domain-num">01</span>
+                        </div>
+                        <h3>Full Stack Development</h3>
+                        <p class="domain-desc">AI-based training that takes you from front end to back end. Build modern web apps with AI coding tools and deploy production-ready projects.</p>
+                        <ul class="tags">
+                                <li>Frontend</li><li>Backend</li><li>Databases</li><li>APIs</li><li>Deployment</li>
+                            </ul>
+                        <div class="domain-foot">
+                            <p class="includes">Includes <b>hands-on projects</b> and <b>mentor guidance</b></p>
+                            <a class="btn btn-gold btn-apply" href="https://wa.me/919526986282?text=Hello%20Kareers%2C%20I%20want%20to%20apply%20for%20Full%20Stack%20Development." target="_blank" rel="noopener">Apply now <svg class="arrow" aria-hidden="true"><use href="#i-arrow" /></svg></a>
+                        </div>
+                    </article>
+
+                    <article class="domain-card" data-reveal style="--d:.06s">
+                        <div class="domain-top">
+                            <span class="domain-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 20h18M6 16.5v-4M11 16.5V9M16 16.5v-6.5M20.5 16.5V5" /></svg></span>
+                            <span class="domain-num">02</span>
+                        </div>
+                        <h3>Data Science</h3>
+                        <p class="domain-desc">AI-based training in Python, analytics and machine learning. Turn data into decisions with practical, real-world projects.</p>
+                        <ul class="tags">
+                                <li>Python</li><li>Analytics</li><li>Machine Learning</li><li>Visualisation</li><li>Projects</li>
+                            </ul>
+                        <div class="domain-foot">
+                            <p class="includes">Includes <b>practical curriculum</b> and <b>portfolio projects</b></p>
+                            <a class="btn btn-gold btn-apply" href="https://wa.me/919526986282?text=Hello%20Kareers%2C%20I%20want%20to%20apply%20for%20Data%20Science." target="_blank" rel="noopener">Apply now <svg class="arrow" aria-hidden="true"><use href="#i-arrow" /></svg></a>
+                        </div>
+                    </article>
+
+                    <article class="domain-card" data-reveal style="--d:.12s">
+                        <div class="domain-top">
+                            <span class="domain-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l8 3v6c0 4.5-3.4 8.2-8 9-4.6-.8-8-4.5-8-9V6l8-3z" /><path d="M9 12l2 2 4-4" /></svg></span>
+                            <span class="domain-num">03</span>
+                        </div>
+                        <h3>Cyber Security</h3>
+                        <p class="domain-desc">AI-based training with hands-on labs. Learn to protect systems, detect threats and apply the security practices modern teams use.</p>
+                        <ul class="tags">
+                                <li>Networking</li><li>Ethical Hacking</li><li>Threats</li><li>Defence</li><li>Labs</li>
+                            </ul>
+                        <div class="domain-foot">
+                            <p class="includes">Includes <b>security labs</b> and <b>interview preparation</b></p>
+                            <a class="btn btn-gold btn-apply" href="https://wa.me/919526986282?text=Hello%20Kareers%2C%20I%20want%20to%20apply%20for%20Cyber%20Security." target="_blank" rel="noopener">Apply now <svg class="arrow" aria-hidden="true"><use href="#i-arrow" /></svg></a>
+                        </div>
+                    </article>
+
+                    <article class="domain-card" data-reveal style="--d:.18s">
+                        <div class="domain-top">
+                            <span class="domain-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 18.5a4.5 4.5 0 01-.8-8.93A6 6 0 0117.6 8.1 4.5 4.5 0 0117 18.5H7z" /></svg></span>
+                            <span class="domain-num">04</span>
+                        </div>
+                        <h3>Cloud Computing</h3>
+                        <p class="domain-desc">AI-based training on cloud platforms, scalable infrastructure and automation, using the tools companies run every day.</p>
+                        <ul class="tags">
+                                <li>Cloud Platforms</li><li>Linux</li><li>DevOps</li><li>Automation</li><li>Architecture</li>
+                            </ul>
+                        <div class="domain-foot">
+                            <p class="includes">Includes <b>cloud labs</b> and <b>DevOps practice</b></p>
+                            <a class="btn btn-gold btn-apply" href="https://wa.me/919526986282?text=Hello%20Kareers%2C%20I%20want%20to%20explore%20Cloud%20Computing." target="_blank" rel="noopener">Apply now <svg class="arrow" aria-hidden="true"><use href="#i-arrow" /></svg></a>
+                        </div>
+                    </article>
                 </div>
             </div>
-            <!-- End Footer Bottom -->
+        </section>
+
+        <!-- Promise -->
+        <section class="section promise" aria-labelledby="promise-title">
+            <div class="wrap promise-grid">
+                <div data-reveal>
+                    <span class="eyebrow">The Kareers promise</span>
+                    <div class="big-figure" aria-hidden="true">100<span>%</span></div>
+                    <h2 class="display" id="promise-title">Internship placement, <em>or your money back.</em></h2>
+                </div>
+                <ul class="promise-list">
+                    <li data-reveal>
+                        <span class="num">i.</span>
+                        <div>
+                            <h3>We train for the skills companies hire for</h3>
+                            <p>Every domain is shaped around real company requirements, not a textbook syllabus.</p>
+                        </div>
+                    </li>
+                    <li data-reveal style="--d:.08s">
+                        <span class="num">ii.</span>
+                        <div>
+                            <h3>We connect you with companies</h3>
+                            <p>Build your portfolio, prepare for interviews and get introduced for internship placement.</p>
+                        </div>
+                    </li>
+                    <li data-reveal style="--d:.16s">
+                        <span class="num">iii.</span>
+                        <div>
+                            <h3>No placement means a 100% refund</h3>
+                            <p>We're committed to placing every trained student. If we don't, you receive a full refund.</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- How it works -->
+        <section class="section process" id="how-it-works" aria-labelledby="process-title">
+            <div class="wrap">
+                <div class="section-head">
+                    <div data-reveal>
+                        <span class="eyebrow">How it works</span>
+                        <h2 class="display h2" id="process-title">From learning <em>to earning</em>, in four steps.</h2>
+                    </div>
+                    <p class="lede" data-reveal style="--d:.1s">
+                        Choose a domain, learn from practitioners and get the support you need to secure an internship.
+                    </p>
+                </div>
+
+                <ol class="process-grid">
+                    <li class="process-step" data-reveal>
+                        <span class="step-no">Step one</span>
+                        <h3>Choose your domain</h3>
+                        <p>Pick the career track that fits your goals and tell us where you're starting from.</p>
+                    </li>
+                    <li class="process-step" data-reveal style="--d:.08s">
+                        <span class="step-no">Step two</span>
+                        <h3>Learn by doing</h3>
+                        <p>Work through an industry-focused curriculum and guided projects that mirror real company requirements.</p>
+                    </li>
+                    <li class="process-step" data-reveal style="--d:.16s">
+                        <span class="step-no">Step three</span>
+                        <h3>Mentorship &amp; interview prep</h3>
+                        <p>Get feedback from mentors, practise interviews and build a portfolio you can show.</p>
+                    </li>
+                    <li class="process-step" data-reveal style="--d:.24s">
+                        <span class="step-no">Step four</span>
+                        <h3>Start your internship</h3>
+                        <p>We connect you with companies for internship placement. Not placed? 100% refund.</p>
+                    </li>
+                </ol>
+            </div>
+        </section>
+
+        <!-- Why Kareers -->
+        <section class="section" id="about-kareers" aria-labelledby="why-title">
+            <div class="wrap why-grid">
+                <div class="why-photo" data-reveal>
+                    <div class="frame">
+                        <img src="assets/img/about/8.jpg" alt="A student holding notebooks on campus" loading="lazy" width="700" height="690">
+                    </div>
+                    <div class="note">
+                        <b>100%</b>
+                        <span>Internship placement commitment for every trained student.</span>
+                    </div>
+                </div>
+
+                <div>
+                    <span class="eyebrow" data-reveal>Why Kareers</span>
+                    <h2 class="display h2" id="why-title" data-reveal style="--d:.06s; margin-top:18px">Why students <em>choose</em> Kareers.</h2>
+                    <p class="lede" data-reveal style="--d:.12s; margin-top:22px">
+                        Kareers is built to take students from learning to earning. Gain practical skills, build proof of work and get access to internship opportunities at companies.
+                    </p>
+
+                    <ul class="why-list">
+                        <li data-reveal>
+                            <span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l9 5-9 5-9-5 9-5z" /><path d="M3 13l9 5 9-5" /></svg></span>
+                            <div>
+                                <h3>Learn by doing</h3>
+                                <p>Work on guided projects that mirror real company requirements and strengthen your portfolio.</p>
+                            </div>
+                        </li>
+                        <li data-reveal style="--d:.08s">
+                            <span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 12a8 8 0 01-11.6 7.1L4 20l.9-4.4A8 8 0 1120 12z" /></svg></span>
+                            <div>
+                                <h3>Mentorship &amp; interview prep</h3>
+                                <p>Get feedback from mentors, practise interviews and perform confidently in the hiring process.</p>
+                            </div>
+                        </li>
+                        <li data-reveal style="--d:.16s">
+                            <span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3.5 12a8.5 8.5 0 102.5-6L3.5 8.5" /><path d="M3.5 3.5v5h5" /></svg></span>
+                            <div>
+                                <h3>100% refund promise</h3>
+                                <p>We're committed to placing trained students in internships. If we don't place you, you receive a 100% refund.</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Apply -->
+        <section class="section apply" id="career-application" aria-labelledby="apply-title">
+            <div class="wrap">
+                <div class="apply-panel" data-reveal>
+                    <div class="apply-intro">
+                        <span class="eyebrow">Start your Kareers journey</span>
+                        <h2 class="display" id="apply-title">Your internship <em>starts here.</em></h2>
+                        <p>Tell us about yourself and choose the domain you want to master. Our team will contact you about the next cohort.</p>
+
+                        <div class="contact-lines">
+                            <a href="https://wa.me/919526986282" target="_blank" rel="noopener">
+                                <div><small>WhatsApp</small><span>+91 95269 86282</span></div>
+                                <svg aria-hidden="true"><use href="#i-arrow" /></svg>
+                            </a>
+                            <a href="mailto:hello@kareers.in">
+                                <div><small>Email</small><span>hello@kareers.in</span></div>
+                                <svg aria-hidden="true"><use href="#i-arrow" /></svg>
+                            </a>
+                        </div>
+                    </div>
+
+                    <form class="form" id="apply-form" novalidate>
+                        <div class="form-grid">
+                            <div class="field">
+                                <label for="f-name">First name</label>
+                                <input id="f-name" name="f-name" type="text" autocomplete="given-name">
+                            </div>
+                            <div class="field">
+                                <label for="l-name">Last name</label>
+                                <input id="l-name" name="l-name" type="text" autocomplete="family-name">
+                            </div>
+                            <div class="field">
+                                <label for="email">Email address</label>
+                                <input id="email" name="email" type="email" autocomplete="email" placeholder="you@example.com">
+                            </div>
+                            <div class="field">
+                                <label for="phone">Phone number</label>
+                                <input id="phone" name="phone" type="tel" autocomplete="tel" placeholder="+91">
+                            </div>
+                            <div class="field full">
+                                <label for="city">City</label>
+                                <input id="city" name="city" type="text" autocomplete="address-level2">
+                            </div>
+                            <div class="field">
+                                <label for="qualification">Current qualification</label>
+                                <input id="qualification" name="qualification" type="text" placeholder="e.g. B.Tech, final year">
+                            </div>
+                            <div class="field">
+                                <label for="experience">Experience level</label>
+                                <select id="experience" name="experience">
+                                    <option>Beginner</option>
+                                    <option>Some project experience</option>
+                                    <option>Working professional</option>
+                                </select>
+                            </div>
+                            <div class="field full">
+                                <label for="domain">Domain</label>
+                                <select id="domain" name="domain">
+                                    <option>Full Stack Development</option>
+                                    <option>Data Science</option>
+                                    <option>Cyber Security</option>
+                                    <option>Cloud Computing</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-foot">
+                            <p>Your details open in WhatsApp so you can review them before sending.</p>
+                            <button class="btn btn-primary" type="submit">Request program details <svg class="arrow" aria-hidden="true"><use href="#i-arrow" /></svg></button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="wrap">
+            <div class="footer-top">
+                <div>
+                    <a class="brand" href="#top" aria-label="Kareers home">Kareers<svg aria-hidden="true"><use href="#i-cap" /></svg></a>
+                    <p>Kareers trains students in high-demand technology domains and connects them with company internships. If we don't place you, you receive a 100% refund.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Explore</h4>
+                    <ul>
+                        <li><a href="#domains">Domains</a></li>
+                        <li><a href="#how-it-works">How it works</a></li>
+                        <li><a href="#about-kareers">Why Kareers</a></li>
+                        <li><a href="#career-application">Apply</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact</h4>
+                    <ul>
+                        <li><a href="https://wa.me/919526986282" target="_blank" rel="noopener">WhatsApp: +91 95269 86282</a></li>
+                        <li><a href="mailto:hello@kareers.in">hello@kareers.in</a></li>
+                    </ul>
+                </div>
+            </div>
+            <span class="footer-mark" aria-hidden="true">Kareers</span>
+            <div class="footer-bottom">
+                <span>&copy; <span id="year">2026</span> Kareers. All rights reserved.</span>
+                <span>Training to internship.</span>
+            </div>
         </div>
     </footer>
-    <!-- End Footer -->
-    
-    <!-- jQuery Frameworks
-    ============================================= -->
-    <script src="assets/js/jquery-3.7.1.min.js"></script>
-    <script src="assets/js/bootstrap.bundle.min.js"></script>
-    <script src="assets/js/jquery.appear.js"></script>
-    <script src="assets/js/jquery.easing.min.js"></script>
-    <script src="assets/js/swiper-bundle.min.js"></script>
-    <script src="assets/js/progress-bar.min.js"></script>
-    <script src="assets/js/isotope.pkgd.min.js"></script>
-    <script src="assets/js/imagesloaded.pkgd.min.js"></script>
-    <script src="assets/js/magnific-popup.min.js"></script>
-    <script src="assets/js/count-to.js"></script>
-    <script src="assets/js/jquery.nice-select.min.js"></script>
-    <script src="assets/js/wow.min.js"></script>
-    <script src="assets/js/YTPlayer.min.js"></script>
-    <script src="assets/js/loopcounter.js"></script>
-    <script src="assets/js/validnavs.js"></script>
-    <script src="assets/js/gsap.js"></script>
-    <script src="assets/js/ScrollTrigger.min.js"></script>
-    <script src="assets/js/SplitText.min.js"></script>
-    <script src="assets/js/main.js"></script>
+
+    <a class="wa-float" href="https://wa.me/919526986282?text=Hello%20Kareers%2C%20I%20want%20to%20learn%20more." target="_blank" rel="noopener" aria-label="Chat with Kareers on WhatsApp">
+        <span class="wa-icon"><svg aria-hidden="true"><use href="#i-wa" /></svg></span>
+        <span class="label">Chat with us</span>
+    </a>
+
     <script>
-        document.getElementById('request-program-details').addEventListener('click', function (event) {
-            event.preventDefault();
+        (function () {
+            var WA = 'https://wa.me/919526986282';
+            var root = document.documentElement;
+            var header = document.getElementById('header');
+            var toggle = document.querySelector('.nav-toggle');
 
-            var form = this.closest('form');
-            var fields = [
-                ['First Name', form.querySelector('#f-name').value.trim()],
-                ['Last Name', form.querySelector('#l-name').value.trim()],
-                ['Email', form.querySelector('#email').value.trim()],
-                ['Phone', form.querySelector('#phone').value.trim()],
-                ['City', form.querySelector('#country').value.trim()],
-                ['Current Qualification', form.querySelector('#address-1').value.trim()],
-                ['Experience Level', form.querySelector('#address-2').value.trim()],
-                ['Domain', form.querySelector('#subject').options[form.querySelector('#subject').selectedIndex].text]
-            ];
-            var message = 'Hello Kareers, I want to request program details.%0A%0A' +
-                fields.map(function (field) {
-                    return encodeURIComponent(field[0] + ': ' + (field[1] || 'Not provided'));
-                }).join('%0A');
+            // Header background on scroll
+            function onScroll() {
+                header.classList.toggle('is-scrolled', window.scrollY > 12);
+            }
+            onScroll();
+            window.addEventListener('scroll', onScroll, { passive: true });
 
-            window.open('https://wa.me/919526986282?text=' + message, '_blank', 'noopener');
-        });
+            // Mobile menu
+            function setMenu(open) {
+                root.classList.toggle('nav-open', open);
+                toggle.setAttribute('aria-expanded', open);
+                toggle.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+            }
+            toggle.addEventListener('click', function () {
+                setMenu(!root.classList.contains('nav-open'));
+            });
+            document.querySelectorAll('.nav-links a').forEach(function (link) {
+                link.addEventListener('click', function () { setMenu(false); });
+            });
+            document.addEventListener('keydown', function (e) {
+                if (e.key === 'Escape') setMenu(false);
+            });
+
+            // Reveal on scroll
+            var items = document.querySelectorAll('[data-reveal]');
+            if ('IntersectionObserver' in window) {
+                var io = new IntersectionObserver(function (entries) {
+                    entries.forEach(function (entry) {
+                        if (entry.isIntersecting) {
+                            entry.target.classList.add('is-in');
+                            io.unobserve(entry.target);
+                        }
+                    });
+                }, { rootMargin: '0px 0px -8% 0px', threshold: 0.08 });
+                items.forEach(function (el) { io.observe(el); });
+            } else {
+                items.forEach(function (el) { el.classList.add('is-in'); });
+            }
+
+            // Portal showcase: tilts flat and settles as it scrolls into view
+            var stage = document.getElementById('showcase-stage');
+            var still = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+            if (stage && !still) {
+                var ticking = false;
+                var update = function () {
+                    ticking = false;
+                    var r = stage.getBoundingClientRect();
+                    var vh = window.innerHeight;
+                    // 0 when the stage top meets the bottom of the screen, 1 once it reaches ~22% from the top
+                    var p = (vh - r.top) / (vh * 0.78);
+                    p = Math.max(0, Math.min(1, p));
+                    p = 1 - Math.pow(1 - p, 2);
+                    stage.style.setProperty('--p', p.toFixed(4));
+                };
+                var request = function () {
+                    if (!ticking) { ticking = true; requestAnimationFrame(update); }
+                };
+                update();
+                window.addEventListener('scroll', request, { passive: true });
+                window.addEventListener('resize', request);
+                window.addEventListener('load', request);
+                if (document.fonts && document.fonts.ready) document.fonts.ready.then(request);
+            }
+
+            // Application form -> WhatsApp
+            document.getElementById('apply-form').addEventListener('submit', function (e) {
+                e.preventDefault();
+                var f = this;
+                var val = function (id) { return f.querySelector('#' + id).value.trim(); };
+                var fields = [
+                    ['First Name', val('f-name')],
+                    ['Last Name', val('l-name')],
+                    ['Email', val('email')],
+                    ['Phone', val('phone')],
+                    ['City', val('city')],
+                    ['Current Qualification', val('qualification')],
+                    ['Experience Level', val('experience')],
+                    ['Domain', val('domain')]
+                ];
+                var message = 'Hello Kareers, I want to request program details.\n\n' +
+                    fields.map(function (x) { return x[0] + ': ' + (x[1] || 'Not provided'); }).join('\n');
+                window.open(WA + '?text=' + encodeURIComponent(message), '_blank', 'noopener');
+            });
+
+            document.getElementById('year').textContent = new Date().getFullYear();
+        })();
     </script>
-
 </body>
+
 </html>
